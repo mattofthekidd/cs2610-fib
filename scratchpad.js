@@ -226,7 +226,6 @@ var trib = function (n, node) {
 		"div {" +
 		"    background: lightseagreen;" +
 		"    display: inline-block;" +
-		"    vertical-align: baseline;" +
 		"}" +
 		"" +
 		"#fib {" +
