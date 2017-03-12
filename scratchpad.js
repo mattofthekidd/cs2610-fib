@@ -24,7 +24,13 @@ function createDiv() {
 	document.body.appendChild(div);
 	return div;
 }
-
+/**
+ * Create node for tree format.
+ */
+function createCell(pos, val) {
+	var clas = pos.html.getAttribute("class");
+	pos.html.setAttribute("class", clas + " fib-"+val + " fib");
+}
 /**
  * Creates links to sites holding info on the number series.
  */
@@ -71,17 +77,12 @@ function fibHelper(n) {
 	else {
 		//left
 		var left = fibHelper(n - 1);
-		var fib_class = left.html.getAttribute("class");
-		left.html.setAttribute("class", fib_class + " fib-left fib");
-
+		createCell(left, "left");
 		//right
 		var right = fibHelper(n - 2);
-		fib_class = right.html.getAttribute("class");
-		right.html.setAttribute("class", fib_class + " fib-right fib");
-
+		createCell(right, "right");
 		//result
 		value = left.value + right.value;
-		// var p = document.createElement('p');
 		p.textContent = 'f(' + n + ')=' + value;
 		div.appendChild(p);
 
@@ -103,6 +104,7 @@ var fib = function (n, node) {
 function pellHelper(n) {
 	var value;
 	var div = document.createElement('div');
+	var p = document.createElement('p');
 	//If value is 0 or 1
 	if(n < 2) {
 		if (n === 0) {
@@ -111,24 +113,20 @@ function pellHelper(n) {
 		else if (n === 1) {
 			value = 1;
 		}
-		var p = document.createElement('p');
 		p.textContent = 'p(' + n + ')=' + value;
 		div.appendChild(p);
 	}
 	else {
 		//left
 		var left = pellHelper(n - 1);
-		var pell_class = left.html.getAttribute("class");
-		left.html.setAttribute("class", pell_class + " fib-left fib");
+		createCell(left, "left");
 
 		//right
 		var right = pellHelper(n - 2);
-		pell_class = right.html.getAttribute("class");
-		right.html.setAttribute("class", pell_class + " fib-right fib");
+		createCell(right, "right");
 
 		//result
 		value = 2*left.value + right.value;
-		var p = document.createElement('p');
 		p.textContent = 'p(' + n + ')=' + value;
 		div.appendChild(p);
 
@@ -150,6 +148,7 @@ var pell = function(n, node) {
 function tribHelper(n) {
 	var value;
 	var div = document.createElement('div');
+		var p = document.createElement('p');
 	//If value is 0, 1, or 2
 	if(n < 3) {
 		if (n === 0 || n === 1) {
@@ -158,29 +157,22 @@ function tribHelper(n) {
 		else if (n === 2) {
 			value = 1;
 		}
-		var p = document.createElement('p');
 		p.textContent = 't(' + n + ')=' + value;
 		div.appendChild(p);
 	}
 	else {
 		//left
 		var left = tribHelper(n - 1);
-		var trib_class = left.html.getAttribute("class");
-		left.html.setAttribute("class", trib_class + " fib-left fib");
-
+		createCell(left, "left");
 		//middle
 		var middle = tribHelper(n - 2);
-		trib_class = middle.html.getAttribute("class");
-		middle.html.setAttribute("class", trib_class + " fib-middle fib");
+		createCell(middle, "middle");
 
 		//right
 		var right = tribHelper(n - 3);
-		trib_class = right.html.getAttribute("class");
-		right.html.setAttribute("class", trib_class + " fib-right fib");
-
+		createCell(right, "right");
 		//result
 		value = left.value + middle.value + right.value;
-		var p = document.createElement('p');
 		p.textContent = 't(' + n + ')=' + value;
 		div.appendChild(p);
 
@@ -251,14 +243,14 @@ var trib = function(n, node) {
 		"    text-align: center;" +
 		"    margin: 10px;" +
 		"    cursor: pointer;" +
-		"    border-color: rgb(125, 1, 249);" +
+		"    border-color: rgb(23, 0, 237);" +
 		"    border-radius: 10px;" +
 		"    border-width: 2px;" +
 		"    border-style: solid;" +
 		"}" +
 		"" +
 		".fib div {" +
-		"    background: rgba(125, 1, 249, .12);" +
+		"    background: rgba(23, 0, 237, .12);" +
 		"    margin: 0px 2px 0px 2px;" +
 		"    display: flex-inline;" +
 		"}" +
