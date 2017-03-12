@@ -30,8 +30,8 @@
           <file leaf-file-name="scratchpad.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/scratchpad.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="227" column="38" selection-start-line="227" selection-start-column="38" selection-end-line="227" selection-end-column="38" />
+                <state relative-caret-position="245">
+                  <caret line="260" column="45" selection-start-line="260" selection-start-column="45" selection-end-line="260" selection-end-column="45" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -589,12 +589,12 @@
       <updated>1489175334522</updated>
       <workItem from="1489175338497" duration="15871000" />
       <workItem from="1489349467414" duration="236000" />
-      <workItem from="1489349798940" duration="8786000" />
+      <workItem from="1489349798940" duration="8855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24893000" />
+    <option name="totallyTimeSpent" value="24962000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -719,8 +719,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scratchpad.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="227" column="38" selection-start-line="227" selection-start-column="38" selection-end-line="227" selection-end-column="38" />
+        <state relative-caret-position="245">
+          <caret line="260" column="45" selection-start-line="260" selection-start-column="45" selection-end-line="260" selection-end-column="45" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

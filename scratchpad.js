@@ -258,7 +258,7 @@ var trib = function (n, node) {
 		"}" +
 		"" +
 		".fib div {" +
-		"    background: rgba(23, 0, 237, .1);" +
+		"    background: rgba(23, 0, 237, .15);" +
 		"    margin: 0px 2px 0px 2px;" +
 		"    mix-blend-mode: hard-light;" +
 		"}" +
