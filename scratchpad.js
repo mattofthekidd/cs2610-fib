@@ -56,6 +56,7 @@ function addLink(node) {
 function fibHelper(n) {
 	var value;
 	var div = document.createElement('div');
+	//If value is 0 or 1
 	if (n < 2) {
 		if (n === 0) {
 			value = 0;
@@ -68,14 +69,17 @@ function fibHelper(n) {
 		div.appendChild(p);
 	}
 	else {
+		//left
 		var left = fibHelper(n - 1);
 		var fib_class = left.html.getAttribute("class");
 		left.html.setAttribute("class", fib_class + " fib-left");
 
+		//right
 		var right = fibHelper(n - 2);
 		fib_class = right.html.getAttribute("class");
 		right.html.setAttribute("class", fib_class + " fib-right");
 
+		//result
 		value = left.value + right.value;
 		var p = document.createElement('p');
 		p.textContent = 'f(' + n + ') = ' + value;
@@ -99,6 +103,7 @@ var fib = function (n, node) {
 function pellHelper(n) {
 	var value;
 	var div = document.createElement('div');
+	//If value is 0 or 1
 	if(n < 2) {
 		if (n === 0) {
 			value = 0;
@@ -111,19 +116,22 @@ function pellHelper(n) {
 		div.appendChild(p);
 	}
 	else {
+		//left
 		var left = pellHelper(n - 1);
 		var pell_class = left.html.getAttribute("class");
 		left.html.setAttribute("class", pell_class + " fib-left");
 
+		//right
 		var right = pellHelper(n - 2);
 		pell_class = right.html.getAttribute("class");
 		right.html.setAttribute("class", pell_class + " fib-right");
 
+		//result
 		value = 2*left.value + 2*right.value;
 		var p = document.createElement('p');
 		p.textContent = 'p(' + n + ') = ' + value;
-		div.appendChild(p);
 
+		div.appendChild(p);
 		div.appendChild(left.html);
 		div.appendChild(right.html);
 	}
@@ -154,15 +162,18 @@ function tribHelper(n) {
 		div.appendChild(p);
 	}
 	else {
+		//left
 		var left = tribHelper(n - 1);
 		var trib_class = left.html.getAttribute("class");
 		left.html.setAttribute("class", trib_class + " fib-left");
 
+		//middle
 		var middle = tribHelper(n - 2);
 		trib_class = middle.html.getAttribute("class");
 		middle.html.setAttribute("class", trib_class + " fib-middle");
 
-		var right = tribHelper(n - 2);
+		//right
+		var right = tribHelper(n - 3);
 		trib_class = right.html.getAttribute("class");
 		right.html.setAttribute("class", trib_class + " fib-right");
 
