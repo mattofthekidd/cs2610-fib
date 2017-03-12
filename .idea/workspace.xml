@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e919e39b-ab19-41ac-ad86-52ff1abbb677" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backup/style.css" afterPath="$PROJECT_DIR$/backup/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scratchpad.js" afterPath="$PROJECT_DIR$/scratchpad.js" />
     </list>
     <ignored path="cs2610-js.iws" />
@@ -29,8 +30,8 @@
           <file leaf-file-name="scratchpad.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/scratchpad.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="140" column="29" selection-start-line="140" selection-start-column="29" selection-end-line="140" selection-end-column="29" />
+                <state relative-caret-position="335">
+                  <caret line="226" column="30" selection-start-line="226" selection-start-column="30" selection-end-line="226" selection-end-column="30" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -41,8 +42,8 @@
           <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/backup/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+                <state relative-caret-position="225">
+                  <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -55,8 +56,8 @@
           <file leaf-file-name="scratchpad.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/scratchpad.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+                <state relative-caret-position="195">
+                  <caret line="125" column="14" selection-start-line="125" selection-start-column="14" selection-end-line="125" selection-end-column="14" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -588,12 +589,12 @@
       <updated>1489175334522</updated>
       <workItem from="1489175338497" duration="15871000" />
       <workItem from="1489349467414" duration="236000" />
-      <workItem from="1489349798940" duration="6145000" />
+      <workItem from="1489349798940" duration="8573000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22252000" />
+    <option name="totallyTimeSpent" value="24680000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -648,7 +649,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -710,16 +711,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backup/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        <state relative-caret-position="225">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scratchpad.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="140" column="29" selection-start-line="140" selection-start-column="29" selection-end-line="140" selection-end-column="29" />
+        <state relative-caret-position="335">
+          <caret line="226" column="30" selection-start-line="226" selection-start-column="30" selection-end-line="226" selection-end-column="30" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

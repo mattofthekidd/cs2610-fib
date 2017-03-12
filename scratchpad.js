@@ -29,7 +29,7 @@ function createDiv() {
  */
 function createCell(pos, val) {
 	var clas = pos.html.getAttribute("class");
-	pos.html.setAttribute("class", clas + " fib-"+val + " fib");
+	pos.html.setAttribute("class", clas + " fib-" + val + " fib");
 }
 /**
  * Creates links to sites holding info on the number series.
@@ -38,17 +38,21 @@ function addLink(node) {
 	var value = "";
 	var p = document.createElement('p');
 	var link = document.createElement('a');
-	if(node.id.toString() == "fib") {
+	if (node.id.toString() == "fib") {
 		value = ("A000045");
-		p.textContent = ("Fibonacci");
+		p.textContent = ("<Fibonacci>");
 	}
-	else if(node.id.toString() == "pell") {
+	else if (node.id.toString() == "pell") {
 		value = ("A000129");
-		p.textContent = ("Pell");
+		p.textContent = ("<Pell>");
+	}
+	else if (node.id.toString() == "trib") {
+		value = ("A000073");
+		p.textContent = ("<Tribonacci>");
 	}
 	else {
-		value = ("A000073");
-		p.textContent = ("Tribonacci");
+		value = "";
+		p.textContent = ("Why is this here?!");
 	}
 	link.href = "https://oeis.org/" + value;
 	link.appendChild(p);
@@ -78,9 +82,11 @@ function fibHelper(n) {
 		//left
 		var left = fibHelper(n - 1);
 		createCell(left, "left");
+
 		//right
 		var right = fibHelper(n - 2);
 		createCell(right, "right");
+
 		//result
 		value = left.value + right.value;
 		p.textContent = 'f(' + n + ')=' + value;
@@ -106,7 +112,7 @@ function pellHelper(n) {
 	var div = document.createElement('div');
 	var p = document.createElement('p');
 	//If value is 0 or 1
-	if(n < 2) {
+	if (n < 2) {
 		if (n === 0) {
 			value = 0;
 		}
@@ -126,16 +132,16 @@ function pellHelper(n) {
 		createCell(right, "right");
 
 		//result
-		value = 2*left.value + right.value;
+		value = 2 * left.value + right.value;
 		p.textContent = 'p(' + n + ')=' + value;
 		div.appendChild(p);
 
 		div.appendChild(left.html);
 		div.appendChild(right.html);
 	}
-	return{'value': value, 'html': div};
+	return {'value': value, 'html': div};
 }
-var pell = function(n, node) {
+var pell = function (n, node) {
 	node.setAttribute("id", "pell");
 	addLink(node);
 	var tree = pellHelper(n);
@@ -148,9 +154,9 @@ var pell = function(n, node) {
 function tribHelper(n) {
 	var value;
 	var div = document.createElement('div');
-		var p = document.createElement('p');
+	var p = document.createElement('p');
 	//If value is 0, 1, or 2
-	if(n < 3) {
+	if (n < 3) {
 		if (n === 0 || n === 1) {
 			value = 0;
 		}
@@ -164,6 +170,7 @@ function tribHelper(n) {
 		//left
 		var left = tribHelper(n - 1);
 		createCell(left, "left");
+
 		//middle
 		var middle = tribHelper(n - 2);
 		createCell(middle, "middle");
@@ -171,6 +178,7 @@ function tribHelper(n) {
 		//right
 		var right = tribHelper(n - 3);
 		createCell(right, "right");
+
 		//result
 		value = left.value + middle.value + right.value;
 		p.textContent = 't(' + n + ')=' + value;
@@ -180,9 +188,9 @@ function tribHelper(n) {
 		div.appendChild(middle.html);
 		div.appendChild(right.html);
 	}
-	return{'value': value, 'html': div};
+	return {'value': value, 'html': div};
 }
-var trib = function(n, node) {
+var trib = function (n, node) {
 	node.setAttribute("id", "trib");
 	addLink(node);
 	var tree = tribHelper(n);
@@ -192,7 +200,7 @@ var trib = function(n, node) {
 /**
  * essentially my main function.
  */
-(function() {
+(function () {
 	fib(11, createDiv());
 	pell(11, createDiv());
 	trib(11, createDiv());
@@ -203,7 +211,7 @@ var trib = function(n, node) {
  * I had originally tried using width: 50%; for fib-left and fib-right but the layout was all wrong.
  * Looked to in class example for formatting help.
  */
-(function() {
+(function () {
 	var style = document.createElement('style');
 	style.textContent =
 		"a:hover {" +
@@ -212,12 +220,13 @@ var trib = function(n, node) {
 		"" +
 		"a {" +
 		"    text-align: left;" +
-			"text-shadow: none;" +
+		"	 text-shadow: none;" +
 		"}" +
 		"" +
 		"div {" +
 		"    background: lightseagreen;" +
 		"    display: inline-block;" +
+		"    vertical-align: baseline;" +
 		"}" +
 		"" +
 		"#fib {" +
@@ -250,38 +259,23 @@ var trib = function(n, node) {
 		"}" +
 		"" +
 		".fib div {" +
-		"    background: rgba(23, 0, 237, .12);" +
+		"    background: rgba(23, 0, 237, .1);" +
 		"    margin: 0px 2px 0px 2px;" +
-		"    display: flex-inline;" +
+		"    mix-blend-mode: hard-light;" +
 		"}" +
-		""+
+		"" +
 		".fib-left {" +
 		"    float: left;" +
-		"    flex-direction: left;" +
 		"	 border-radius: 20px 0px 20px 20px;" +
 		"}" +
 		"" +
 		".fib-right {" +
 		"    float: right;" +
-		"    flex-direction: right;" +
 		"	 border-radius: 0px 20px 20px 20px;" +
 		"}" +
 		"" +
 		".fib-middle {" +
-			"float: middle;" +
 		"	 border-radius: 0px 0px 20px 20px;" +
-		"}" +
-		"" +
-		".fib-left div {" +
-		"    mix-blend-mode: hard-light;" +
-		"}" +
-		"" +
-		".fib-middle div {" +
-		"    mix-blend-mode: hard-light;" +
-		"}" +
-		"" +
-		".fib-right div {" +
-		"    mix-blend-mode: hard-light;" +
 		"}";
 	document.body.appendChild(style);
 })();
