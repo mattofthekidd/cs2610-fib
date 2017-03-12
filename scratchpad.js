@@ -56,6 +56,7 @@ function addLink(node) {
 function fibHelper(n) {
 	var value;
 	var div = document.createElement('div');
+	var p = document.createElement('p');
 	//If value is 0 or 1
 	if (n < 2) {
 		if (n === 0) {
@@ -64,7 +65,6 @@ function fibHelper(n) {
 		else if (n === 1) {
 			value = 1;
 		}
-		var p = document.createElement('p');
 		p.textContent = 'f(' + n + ') = ' + value;
 		div.appendChild(p);
 	}
@@ -81,7 +81,7 @@ function fibHelper(n) {
 
 		//result
 		value = left.value + right.value;
-		var p = document.createElement('p');
+		// var p = document.createElement('p');
 		p.textContent = 'f(' + n + ') = ' + value;
 		div.appendChild(p);
 
@@ -112,7 +112,7 @@ function pellHelper(n) {
 			value = 1;
 		}
 		var p = document.createElement('p');
-		p.textContent = 'p(' + n + ') = ' + value;
+		p.textContent = 'p(' + n + ')= ' + value;
 		div.appendChild(p);
 	}
 	else {
@@ -127,7 +127,7 @@ function pellHelper(n) {
 		right.html.setAttribute("class", pell_class + " fib-right");
 
 		//result
-		value = 2*left.value + 2*right.value;
+		value = 2*left.value + right.value;
 		var p = document.createElement('p');
 		p.textContent = 'p(' + n + ') = ' + value;
 
@@ -150,6 +150,7 @@ var pell = function(n, node) {
 function tribHelper(n) {
 	var value;
 	var div = document.createElement('div');
+	//If value is 0, 1, or 2
 	if(n < 3) {
 		if (n === 0 || n === 1) {
 			value = 0;
@@ -158,7 +159,7 @@ function tribHelper(n) {
 			value = 1;
 		}
 		var p = document.createElement('p');
-		p.textContent = 't(' + n + ') = ' + value;
+		p.textContent = 't(' + n + ')= ' + value;
 		div.appendChild(p);
 	}
 	else {
@@ -177,9 +178,10 @@ function tribHelper(n) {
 		trib_class = right.html.getAttribute("class");
 		right.html.setAttribute("class", trib_class + " fib-right");
 
+		//result
 		value = left.value + middle.value + right.value;
 		var p = document.createElement('p');
-		p.textContent = 't(' + n + ') = ' + value;
+		p.textContent = 't(' + n + ')= ' + value;
 		div.appendChild(p);
 
 		div.appendChild(left.html);
@@ -221,19 +223,19 @@ var trib = function(n, node) {
 		"#fib {" +
 		"    background: lightseagreen;" +
 		"    display: inline-block;" +
-		"    width: 9470px;" +
+		"    width: 8900px;" +
 		"}" +
 		"" +
 		"#pell {" +
 		"    background: lightseagreen;" +
 		"    display: inline-block;" +
-		"    width: 9650px;" +
+		"    width: 8285px;" +
 		"}" +
 		"" +
 		"#trib {" +
 		"    background: lightseagreen;" +
 		"    display: inline-block;" +
-		"    width: 23355px;" +
+		"    width: 20705px;" +
 		"}" +
 		".shadowed {" +
 		"    text-shadow: 1px 1px 2px black;" +
@@ -254,15 +256,15 @@ var trib = function(n, node) {
 		"}" +
 		".fib-left {" +
 		"    float: left;" +
-		"    display: inline-block;" +
-		"    margin-right: 2px;" +
+		"    display: flex-inline;" +
+		"    flex-direction: left;" +
 		"    background: rgba(125, 1, 249, .1);" +
 		"}" +
 		"" +
 		".fib-right {" +
 		"    float: right;" +
-		"    display: inline-block;" +
-		"    margin-left: 2px;" +
+		"    display: flex-inline;" +
+		"    flex-direction: right;" +
 		"    background: rgba(125, 1, 249, .1);" +
 		"}" +
 		"" +
@@ -272,11 +274,11 @@ var trib = function(n, node) {
 		"    background: rgba(125, 1, 249, .1);" +
 		"}" +
 		"" +
-		".fib-left span {" +
+		".fib-left div {" +
 		"    mix-blend-mode: hard-light;" +
 		"}" +
 		"" +
-		".fib-right span {" +
+		".fib-right div {" +
 		"    mix-blend-mode: hard-light;" +
 		"}";
 	document.body.appendChild(style);
