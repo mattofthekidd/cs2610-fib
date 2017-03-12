@@ -7,12 +7,27 @@
  * 3. Display to insert the result in a comment after the selection. (Cmd-L)
  */
 
+/**
+ * Modifies the title of the page.
+ */
+(function () {
+	document.querySelector('title');
+	document.title = "JavaScript Recursive Sequences";
+})();
+
+/**
+ * Creates a div for containing the number series.
+ */
 function createDiv() {
 	var div = document.createElement('div');
 	div.setAttribute("class", " stuff-box shadowed");
 	document.body.appendChild(div);
 	return div;
 }
+
+/**
+ * Creates links to sites holding info on the number series.
+ */
 function addLink(node) {
 	var value = "";
 	var p = document.createElement('p');
@@ -31,16 +46,13 @@ function addLink(node) {
 	}
 	link.href = "https://oeis.org/" + value;
 	link.appendChild(p);
-
-
 	node.appendChild(link);
-
 }
-(function () {
-	document.querySelector('title');
-	document.title = "JavaScript Recursive Sequences";
-})();
 
+/**
+ * Used in-class example for fibonacci.
+ * Also based the pell and tribonacci recursive functions off of this.
+ */
 function fibHelper(n) {
 	var value;
 	var div = document.createElement('div');
@@ -81,6 +93,9 @@ var fib = function (n, node) {
 	node.appendChild(tree.html);
 };
 
+/**
+ * Group of functions for generating pell numbers.
+ */
 function pellHelper(n) {
 	var value;
 	var div = document.createElement('div');
@@ -113,7 +128,7 @@ function pellHelper(n) {
 		div.appendChild(right.html);
 	}
 	return{'value': value, 'html': div};
-};
+}
 var pell = function(n, node) {
 	node.setAttribute("id", "pell");
 	addLink(node);
@@ -121,6 +136,9 @@ var pell = function(n, node) {
 	node.appendChild(tree.html);
 };
 
+/**
+ * Group of functions to generate tribonacci numbers
+ */
 function tribHelper(n) {
 	var value;
 	var div = document.createElement('div');
@@ -166,14 +184,20 @@ var trib = function(n, node) {
 	node.appendChild(tree.html);
 };
 
-
-
+/**
+ * essentially my main function.
+ */
 (function() {
 	fib(11, createDiv());
 	pell(11, createDiv());
 	trib(11, createDiv());
 })();
 
+/**
+ * Used shadowed and stuff-box from in class examples.
+ * I had originally tried using width: 50%; for fib-left and fib-right but the layout was all wrong.
+ * Looked to in class example for formatting help.
+ */
 (function() {
 	var style = document.createElement('style');
 	style.textContent =
@@ -244,5 +268,5 @@ var trib = function(n, node) {
 		".fib-right span {" +
 		"    mix-blend-mode: hard-light;" +
 		"}";
-	document.querySelector('body').appendChild(style);
+	document.body.appendChild(style);
 })();
