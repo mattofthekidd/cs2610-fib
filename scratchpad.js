@@ -20,7 +20,7 @@
  */
 function createDiv() {
 	var div = document.createElement('div');
-	div.setAttribute("class", " stuff-box shadowed");
+	div.setAttribute("class", " stuff-box shadowed fib");
 	document.body.appendChild(div);
 	return div;
 }
@@ -65,24 +65,24 @@ function fibHelper(n) {
 		else if (n === 1) {
 			value = 1;
 		}
-		p.textContent = 'f(' + n + ') = ' + value;
+		p.textContent = 'f(' + n + ')=' + value;
 		div.appendChild(p);
 	}
 	else {
 		//left
 		var left = fibHelper(n - 1);
 		var fib_class = left.html.getAttribute("class");
-		left.html.setAttribute("class", fib_class + " fib-left");
+		left.html.setAttribute("class", fib_class + " fib-left fib");
 
 		//right
 		var right = fibHelper(n - 2);
 		fib_class = right.html.getAttribute("class");
-		right.html.setAttribute("class", fib_class + " fib-right");
+		right.html.setAttribute("class", fib_class + " fib-right fib");
 
 		//result
 		value = left.value + right.value;
 		// var p = document.createElement('p');
-		p.textContent = 'f(' + n + ') = ' + value;
+		p.textContent = 'f(' + n + ')=' + value;
 		div.appendChild(p);
 
 		div.appendChild(left.html);
@@ -112,26 +112,26 @@ function pellHelper(n) {
 			value = 1;
 		}
 		var p = document.createElement('p');
-		p.textContent = 'p(' + n + ')= ' + value;
+		p.textContent = 'p(' + n + ')=' + value;
 		div.appendChild(p);
 	}
 	else {
 		//left
 		var left = pellHelper(n - 1);
 		var pell_class = left.html.getAttribute("class");
-		left.html.setAttribute("class", pell_class + " fib-left");
+		left.html.setAttribute("class", pell_class + " fib-left fib");
 
 		//right
 		var right = pellHelper(n - 2);
 		pell_class = right.html.getAttribute("class");
-		right.html.setAttribute("class", pell_class + " fib-right");
+		right.html.setAttribute("class", pell_class + " fib-right fib");
 
 		//result
 		value = 2*left.value + right.value;
 		var p = document.createElement('p');
-		p.textContent = 'p(' + n + ') = ' + value;
-
+		p.textContent = 'p(' + n + ')=' + value;
 		div.appendChild(p);
+
 		div.appendChild(left.html);
 		div.appendChild(right.html);
 	}
@@ -159,29 +159,29 @@ function tribHelper(n) {
 			value = 1;
 		}
 		var p = document.createElement('p');
-		p.textContent = 't(' + n + ')= ' + value;
+		p.textContent = 't(' + n + ')=' + value;
 		div.appendChild(p);
 	}
 	else {
 		//left
 		var left = tribHelper(n - 1);
 		var trib_class = left.html.getAttribute("class");
-		left.html.setAttribute("class", trib_class + " fib-left");
+		left.html.setAttribute("class", trib_class + " fib-left fib");
 
 		//middle
 		var middle = tribHelper(n - 2);
 		trib_class = middle.html.getAttribute("class");
-		middle.html.setAttribute("class", trib_class + " fib-middle");
+		middle.html.setAttribute("class", trib_class + " fib-middle fib");
 
 		//right
 		var right = tribHelper(n - 3);
 		trib_class = right.html.getAttribute("class");
-		right.html.setAttribute("class", trib_class + " fib-right");
+		right.html.setAttribute("class", trib_class + " fib-right fib");
 
 		//result
 		value = left.value + middle.value + right.value;
 		var p = document.createElement('p');
-		p.textContent = 't(' + n + ')= ' + value;
+		p.textContent = 't(' + n + ')=' + value;
 		div.appendChild(p);
 
 		div.appendChild(left.html);
@@ -217,26 +217,29 @@ var trib = function(n, node) {
 		"a:hover {" +
 		"    color: red;" +
 		"}" +
+		"" +
 		"a {" +
 		"    text-align: left;" +
+			"text-shadow: none;" +
 		"}" +
-		"#fib {" +
+		"" +
+		"div {" +
 		"    background: lightseagreen;" +
 		"    display: inline-block;" +
-		"    width: 8900px;" +
+		"}" +
+		"" +
+		"#fib {" +
+		"    width: 8474px;" +
 		"}" +
 		"" +
 		"#pell {" +
-		"    background: lightseagreen;" +
-		"    display: inline-block;" +
-		"    width: 8285px;" +
+		"    width: 8645px;" +
 		"}" +
 		"" +
 		"#trib {" +
-		"    background: lightseagreen;" +
-		"    display: inline-block;" +
-		"    width: 20705px;" +
+		"    width: 20189px;" +
 		"}" +
+		"" +
 		".shadowed {" +
 		"    text-shadow: 1px 1px 2px black;" +
 		"    color:       white;" +
@@ -246,35 +249,42 @@ var trib = function(n, node) {
 		"    letter-spacing: 1px;" +
 		"    text-transform: capitalize;" +
 		"    text-align: center;" +
-		"    padding: 3px 10px;" +
 		"    margin: 10px;" +
 		"    cursor: pointer;" +
-		"    border-color: lightskyblue;" +
+		"    border-color: rgb(125, 1, 249);" +
 		"    border-radius: 10px;" +
 		"    border-width: 2px;" +
 		"    border-style: solid;" +
 		"}" +
+		"" +
+		".fib div {" +
+		"    background: rgba(125, 1, 249, .12);" +
+		"    margin: 0px 2px 0px 2px;" +
+		"    display: flex-inline;" +
+		"}" +
+		""+
 		".fib-left {" +
 		"    float: left;" +
-		"    display: flex-inline;" +
 		"    flex-direction: left;" +
-		"    background: rgba(125, 1, 249, .1);" +
+		"	 border-radius: 20px 0px 20px 20px;" +
 		"}" +
 		"" +
 		".fib-right {" +
 		"    float: right;" +
-		"    display: flex-inline;" +
 		"    flex-direction: right;" +
-		"    background: rgba(125, 1, 249, .1);" +
+		"	 border-radius: 0px 20px 20px 20px;" +
 		"}" +
 		"" +
 		".fib-middle {" +
-		"    display: inline-block;" +
-		"    margin: 0px 2px 0px 2px;" +
-		"    background: rgba(125, 1, 249, .1);" +
+			"float: middle;" +
+		"	 border-radius: 0px 0px 20px 20px;" +
 		"}" +
 		"" +
 		".fib-left div {" +
+		"    mix-blend-mode: hard-light;" +
+		"}" +
+		"" +
+		".fib-middle div {" +
 		"    mix-blend-mode: hard-light;" +
 		"}" +
 		"" +
