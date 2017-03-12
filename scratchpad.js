@@ -233,7 +233,7 @@ var trib = function(n, node) {
 		"#trib {" +
 		"    background: lightseagreen;" +
 		"    display: inline-block;" +
-		"    width: 44920px;" +
+		"    width: 23355px;" +
 		"}" +
 		".shadowed {" +
 		"    text-shadow: 1px 1px 2px black;" +
