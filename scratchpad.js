@@ -6,7 +6,6 @@
  * 2. Inspect to bring up an Object Inspector on the result (Cmd-I), or,
  * 3. Display to insert the result in a comment after the selection. (Cmd-L)
  */
-
 /**
  * Modifies the title of the page.
  */
@@ -14,6 +13,31 @@
 	document.querySelector('title');
 	document.title = "JavaScript Recursive Sequences";
 })();
+
+function helper(n) {
+	var value;
+	//works for fib and pell but not trib
+	if(n < 2) {
+		if(n===0) {
+			value = 0;
+		}
+		else if(n === 1) {
+			value = 1;
+		}
+	}
+	else {
+		value = 9;
+	}
+	return value;
+}
+
+function generateLists(n) {
+	var list = [helper(0)];
+	for(var i = 1; i < n; i++) {
+		list.push(helper(i));
+	}
+	return list;
+}
 
 /**
  * Creates a div for containing the number series.
@@ -49,11 +73,14 @@ function addLink(node) {
 	node.appendChild(link);
 }
 
+
+
 /**
  * Used in-class example for fibonacci.
  * Also based the pell and tribonacci recursive functions off of this.
  */
-function fibHelper(n) {
+
+function fibHelper(n, list) {
 	var value;
 	var div = document.createElement('div');
 	var p = document.createElement('p');
@@ -70,12 +97,12 @@ function fibHelper(n) {
 	}
 	else {
 		//left
-		var left = fibHelper(n - 1);
+		var left = list[n];
 		var fib_class = left.html.getAttribute("class");
 		left.html.setAttribute("class", fib_class + " fib-left");
 
 		//right
-		var right = fibHelper(n - 2);
+		var right = list[n+1];
 		fib_class = right.html.getAttribute("class");
 		right.html.setAttribute("class", fib_class + " fib-right");
 
@@ -91,9 +118,10 @@ function fibHelper(n) {
 	return {'value': value, 'html': div};
 }
 var fib = function (n, node) {
+	var list = generateLists(n);
 	node.setAttribute("id", "fib");
 	addLink(node);
-	var tree = fibHelper(n);
+	var tree = fibHelper(n, list);
 	node.appendChild(tree.html);
 };
 
