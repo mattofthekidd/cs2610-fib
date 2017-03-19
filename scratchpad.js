@@ -126,6 +126,26 @@ var fib = function (n, node) {
 	}
 };
 
+var fibButton = function(me) {
+	var form = me.parentNode;
+	var slider = form.querySelector('input');
+	var value = slider.value;
+	if(value < 0) {
+		value = 0;
+	}
+	var newDiv = createDiv();
+	form.parentNode.appendChild(newDiv);
+	if(document.getElementById("fib") != null) {
+		var oldNode = document.getElementById("fib");
+		form.parentNode.removeChild(oldNode);
+	}
+	fib(parseInt(value), newDiv);
+};
+var fibSlider = function(me) {
+	var form = me.parentNode;
+	var button = form.querySelector('button');
+	button.textContent = 'fib(' + me.value + ')';
+};
 
 /**
  * Group of functions for generating pell numbers.
@@ -192,6 +212,27 @@ var pell = function (n, node) {
 	else {
 		node.setAttribute("style", "width: auto");
 	}
+};
+
+var pellButton = function(me) {
+	var form = me.parentNode;
+	var slider = form.querySelector('input');
+	var value = slider.value;
+	if(value < 0) {
+		value = 0;
+	}
+	var newDiv = createDiv();
+	form.parentNode.appendChild(newDiv);
+	if(document.getElementById("pell") != null) {
+		var oldNode = document.getElementById("pell");
+		form.parentNode.removeChild(oldNode);
+	}
+	pell(parseInt(value), newDiv);
+};
+var pellSlider = function(me) {
+	var form = me.parentNode;
+	var button = form.querySelector('button');
+	button.textContent = 'pell(' + me.value + ')';
 };
 
 /**
@@ -270,48 +311,6 @@ var trib = function (n, node) {
 	}
 };
 
-var fibButton = function(me) {
-	var form = me.parentNode;
-	var slider = form.querySelector('input');
-	var value = slider.value;
-	if(value < 0) {
-		value = 0;
-	}
-	var newDiv = createDiv();
-	form.parentNode.appendChild(newDiv);
-	if(document.getElementById("fib") != null) {
-		var oldNode = document.getElementById("fib");
-			form.parentNode.removeChild(oldNode);
-	}
-	fib(parseInt(value), newDiv);
-};
-var fibSlider = function(me) {
-	var form = me.parentNode;
-	var button = form.querySelector('button');
-	button.textContent = 'fib(' + me.value + ')';
-};
-
-var pellButton = function(me) {
-	var form = me.parentNode;
-	var slider = form.querySelector('input');
-	var value = slider.value;
-	if(value < 0) {
-		value = 0;
-	}
-	var newDiv = createDiv();
-	form.parentNode.appendChild(newDiv);
-	if(document.getElementById("pell") != null) {
-		var oldNode = document.getElementById("pell");
-		form.parentNode.removeChild(oldNode);
-	}
-	pell(parseInt(value), newDiv);
-};
-var pellSlider = function(me) {
-	var form = me.parentNode;
-	var button = form.querySelector('button');
-	button.textContent = 'pell(' + me.value + ')';
-};
-
 var tribButton = function(me) {
 	var form = me.parentNode;
 	var slider = form.querySelector('input');
@@ -332,22 +331,3 @@ var tribSlider = function(me) {
 	var button = form.querySelector('button');
 	button.textContent = 'trib(' + me.value + ')';
 };
-
-
-/**
- * essentially my main function.
- */
-(function () {
-	// trib(11, createDiv());
-	// trib(10, createDiv());
-	// trib(9, createDiv());
-	// trib(8, createDiv());
-	// trib(7, createDiv());
-	// trib(6, createDiv());
-	// trib(5, createDiv());
-	// trib(4, createDiv());
-	// trib(3, createDiv());
-	// trib(2, createDiv());
-	// trib(1, createDiv());
-	// trib(0, createDiv());
-})();
