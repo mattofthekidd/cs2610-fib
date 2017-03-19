@@ -15,12 +15,12 @@
 	document.title = "JavaScript Recursive Sequences";
 })();
 
+
 /**
  * Creates a div for containing the number series.
  */
 function createDiv() {
 	var div = document.createElement('div');
-	div.setAttribute("class", " stuff-box shadowed fib");
 	document.body.appendChild(div);
 	return div;
 }
@@ -98,11 +98,28 @@ function fibHelper(n) {
 	return {'value': value, 'html': div};
 }
 var fib = function (n, node) {
+	node.setAttribute("class", "fib stuff-box shadowed");
 	node.setAttribute("id", "fib");
 	addLink(node);
 	var tree = fibHelper(n);
-	node.appendChild(tree.html);
+		node.appendChild(tree.html);
+	if(n === 11) {
+		var width = (document.querySelector('body').clientWidth * (n + 1) / (2));
+		node.setAttribute("style", "width:" + width + "px");
+	}
+	else if(n === 10) {
+		var width = (document.querySelector('body').clientWidth * (n+1) / (2.99));
+		node.setAttribute("style", "width:" + width + "px");
+	}
+	else if(n===9) {
+		var width = (document.querySelector('body').clientWidth * (n + 1) / (4.4));
+		node.setAttribute("style", "width:" + width + "px");
+	}
+	else {
+		node.setAttribute("style", "width: auto");
+	}
 };
+
 
 /**
  * Group of functions for generating pell numbers.
@@ -197,84 +214,30 @@ var trib = function (n, node) {
 	node.appendChild(tree.html);
 };
 
+var fibButton = function(me) {
+	var form = me.parentNode;
+	var slider = form.querySelector('input');
+	var value = slider.value;
+	if(value < 0) {
+		value = 0;
+	}
+	var newDiv = createDiv();
+	form.parentNode.appendChild(newDiv);
+	fib(parseInt(value), newDiv);
+};
+
+var fibSlider = function(me) {
+	var form = me.parentNode;
+	var button = form.querySelector('button');
+	button.textContent = 'fib(' + me.value + ')';
+};
+
+
 /**
  * essentially my main function.
  */
 (function () {
-	fib(11, createDiv());
-	pell(11, createDiv());
-	trib(11, createDiv());
-})();
-
-/**
- * Used shadowed and stuff-box from in class examples.
- * I had originally tried using width: 50%; for fib-left and fib-right but the layout was all wrong.
- * Looked to in class example for formatting help.
- */
-(function () {
-	var style = document.createElement('style');
-	style.textContent =
-		"a:hover {" +
-		"    color: red;" +
-		"}" +
-		"" +
-		"a {" +
-		"    text-align: left;" +
-		"	 text-shadow: none;" +
-		"}" +
-		"" +
-		"div {" +
-		"    background: lightseagreen;" +
-		"    display: inline-block;" +
-		"}" +
-		"" +
-		"#fib {" +
-		"    width: 8474px;" +
-		"}" +
-		"" +
-		"#pell {" +
-		"    width: 8645px;" +
-		"}" +
-		"" +
-		"#trib {" +
-		"    width: 20189px;" +
-		"}" +
-		"" +
-		".shadowed {" +
-		"    text-shadow: 1px 1px 2px black;" +
-		"    color:       white;" +
-		"}" +
-		".stuff-box {" +
-		"    font-family: 'helvetica neue', helvetica, sans-serif;" +
-		"    letter-spacing: 1px;" +
-		"    text-transform: capitalize;" +
-		"    text-align: center;" +
-		"    margin: 10px;" +
-		"    cursor: pointer;" +
-		"    border-color: rgb(23, 0, 237);" +
-		"    border-radius: 10px;" +
-		"    border-width: 2px;" +
-		"    border-style: solid;" +
-		"}" +
-		"" +
-		".fib div {" +
-		"    background: rgba(23, 0, 237, .15);" +
-		"    margin: 0px 2px 0px 2px;" +
-		"    mix-blend-mode: hard-light;" +
-		"}" +
-		"" +
-		".fib-left {" +
-		"    float: left;" +
-		"	 border-radius: 20px 0px 20px 20px;" +
-		"}" +
-		"" +
-		".fib-right {" +
-		"    float: right;" +
-		"	 border-radius: 0px 20px 20px 20px;" +
-		"}" +
-		"" +
-		".fib-middle {" +
-		"	 border-radius: 0px 0px 20px 20px;" +
-		"}";
-	document.body.appendChild(style);
+	 fib(9, createDiv());
+	 // pell(11, createDiv());
+	 // trib(11, createDiv());
 })();

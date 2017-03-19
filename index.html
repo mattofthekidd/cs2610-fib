@@ -3,8 +3,19 @@
 <head>
    <meta charset="utf-8">
    <title>(placeholder)</title>
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<form>
+   <input type="range" min="0" max="11" value="0" onchange="fibSlider(this)">
+   <button type="button" onclick="fibButton(this)">fib(0)</button>
+
+   <input type="range" min="0" max="11" value="0">
+   <button type="button">pell(0)</button>
+
+   <input type="range" min="0" max="11" value="0">
+   <button type="button">trib(0)</button>
+</form>
 <script src="scratchpad.js" type="text/javascript"></script>
 </body>
 </html>

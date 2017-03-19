@@ -7,21 +7,29 @@ a {
     text-shadow: none;
 }
 
-div {
+.fib {
     background: lightseagreen;
+    position: relative;
     display: inline-block;
+
 }
 
 #fib {
-    width: 8474px;
+
 }
 
 #pell {
-    width: 8645px;
+    /*width: 8645px;*/
+    background: lightseagreen;
+    position: relative;
+    display: inline-block;
 }
 
 #trib {
-    width: 20189px;
+    /*width: 20189px;*/
+    background: lightseagreen;
+
+    display: inline-block;
 }
 
 .shadowed {
@@ -34,6 +42,7 @@ div {
     letter-spacing: 1px;
     text-transform: capitalize;
     text-align: center;
+    padding: 3px 10px;
     margin: 10px;
     cursor: pointer;
     border-color: rgb(23, 0, 237);
@@ -44,18 +53,25 @@ div {
 
 .fib div {
     background: rgba(23, 0, 237, .15);
-    margin: 0px 2px 0px 2px;
     mix-blend-mode: hard-light;
+    display: inline-block;
+    margin: 0px 2px 0px 2px;
+
 }
+
 
 .fib-left {
     float: left;
+    display: inline-table;
     border-radius: 20px 0px 20px 20px;
+
 }
 
 .fib-right {
     float: right;
+    display: inline-table;
     border-radius: 0px 20px 20px 20px;
+
 }
 
 .fib-middle {
