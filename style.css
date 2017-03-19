@@ -9,9 +9,8 @@ a {
 
 .fib {
     background: lightseagreen;
-    position: relative;
     display: inline-block;
-
+    position: static;
 }
 
 #fib {

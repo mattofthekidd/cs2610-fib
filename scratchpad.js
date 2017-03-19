@@ -103,17 +103,24 @@ var fib = function (n, node) {
 	addLink(node);
 	var tree = fibHelper(n);
 		node.appendChild(tree.html);
-	if(n === 11) {
-		var width = (document.querySelector('body').clientWidth * (n + 1) / (2));
-		node.setAttribute("style", "width:" + width + "px");
-	}
-	else if(n === 10) {
-		var width = (document.querySelector('body').clientWidth * (n+1) / (2.99));
-		node.setAttribute("style", "width:" + width + "px");
-	}
-	else if(n===9) {
-		var width = (document.querySelector('body').clientWidth * (n + 1) / (4.4));
-		node.setAttribute("style", "width:" + width + "px");
+	if(n > 7) {
+		var width;
+		if (n === 11) {
+			width = (document.querySelector('body').clientWidth * (n + 1) / (2.015));
+			node.setAttribute("style", "width:" + width + "px");
+		}
+		else if (n === 10) {
+			width = (document.querySelector('body').clientWidth * (n + 1) / (2.99));
+			node.setAttribute("style", "width:" + width + "px");
+		}
+		else if (n === 9) {
+			width = (document.querySelector('body').clientWidth * (n + 1) / (4.4));
+			node.setAttribute("style", "width:" + width + "px");
+		}
+		else if (n === 8) {
+			width = (document.querySelector('body').clientWidth * (n + 1) / (6.4));
+			node.setAttribute("style", "width:" + width + "px");
+		}
 	}
 	else {
 		node.setAttribute("style", "width: auto");
@@ -225,11 +232,44 @@ var fibButton = function(me) {
 	form.parentNode.appendChild(newDiv);
 	fib(parseInt(value), newDiv);
 };
-
 var fibSlider = function(me) {
 	var form = me.parentNode;
 	var button = form.querySelector('button');
 	button.textContent = 'fib(' + me.value + ')';
+};
+
+var pellButton = function(me) {
+	var form = me.parentNode;
+	var slider = form.querySelector('input');
+	var value = slider.value;
+	if(value < 0) {
+		value = 0;
+	}
+	var newDiv = createDiv();
+	form.parentNode.appendChild(newDiv);
+	pell(parseInt(value), newDiv);
+};
+var pellSlider = function(me) {
+	var form = me.parentNode;
+	var button = form.querySelector('button');
+	button.textContent = 'pell(' + me.value + ')';
+};
+
+var tribButton = function(me) {
+	var form = me.parentNode;
+	var slider = form.querySelector('input');
+	var value = slider.value;
+	if(value < 0) {
+		value = 0;
+	}
+	var newDiv = createDiv();
+	form.parentNode.appendChild(newDiv);
+	pell(parseInt(value), newDiv);
+};
+var tribSlider = function(me) {
+	var form = me.parentNode;
+	var button = form.querySelector('button');
+	button.textContent = 'trib(' + me.value + ')';
 };
 
 
@@ -237,7 +277,14 @@ var fibSlider = function(me) {
  * essentially my main function.
  */
 (function () {
-	 fib(9, createDiv());
+	 // fib(11, createDiv());
+	 // fib(10, createDiv());
+	 // fib(9, createDiv());
+	 // fib(8, createDiv());
+	 // fib(7, createDiv());
+	 // fib(6, createDiv());
+	 // fib(5, createDiv());
+	 // fib(4, createDiv());
 	 // pell(11, createDiv());
 	 // trib(11, createDiv());
 })();

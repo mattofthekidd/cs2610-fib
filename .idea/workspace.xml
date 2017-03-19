@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e919e39b-ab19-41ac-ad86-52ff1abbb677" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scratchpad.js" afterPath="$PROJECT_DIR$/scratchpad.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
@@ -32,8 +31,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+                <state relative-caret-position="225">
+                  <caret line="15" column="78" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
                   <folding />
                 </state>
               </provider>
@@ -42,14 +41,14 @@
           <file leaf-file-name="scratchpad.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/scratchpad.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="89">
-                  <caret line="114" column="80" selection-start-line="114" selection-start-column="80" selection-end-line="114" selection-end-column="80" />
+                <state relative-caret-position="331">
+                  <caret line="254" column="30" selection-start-line="254" selection-start-column="30" selection-end-line="254" selection-end-column="30" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                     <element signature="n#!!block;n#pellHelper#0" expanded="false" />
-                    <element signature="e#3730#3840#0" expanded="false" />
+                    <element signature="e#3927#4037#0" expanded="false" />
                     <element signature="n#!!block;n#tribHelper#0" expanded="false" />
-                    <element signature="e#4740#4850#0" expanded="false" />
+                    <element signature="e#4937#5047#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -72,11 +71,11 @@
           <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="193">
-                  <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+                <state relative-caret-position="120">
+                  <caret line="12" column="20" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="20" />
                   <folding>
-                    <element signature="e#405#462#0" expanded="false" />
-                    <element signature="e#475#787#0" expanded="false" />
+                    <element signature="e#402#459#0" expanded="false" />
+                    <element signature="e#472#784#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -102,8 +101,8 @@
         <option value="$PROJECT_DIR$/backup/style.css" />
         <option value="$PROJECT_DIR$/backup/style.js" />
         <option value="$PROJECT_DIR$/reference.txt" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/scratchpad.js" />
       </list>
     </option>
@@ -615,12 +614,12 @@
       <workItem from="1489349467414" duration="236000" />
       <workItem from="1489349798940" duration="9078000" />
       <workItem from="1489430495523" duration="99000" />
-      <workItem from="1489935970823" duration="17006000" />
+      <workItem from="1489935970823" duration="17606000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42290000" />
+    <option name="totallyTimeSpent" value="42890000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -643,7 +642,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2554217" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25492227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08093717" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -726,9 +725,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#!!block;n#pellHelper#0" expanded="false" />
-            <element signature="e#3730#3840#0" expanded="false" />
+            <element signature="e#3927#4037#0" expanded="false" />
             <element signature="n#!!block;n#tribHelper#0" expanded="false" />
-            <element signature="e#4740#4850#0" expanded="false" />
+            <element signature="e#4937#5047#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -740,9 +739,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#!!block;n#pellHelper#0" expanded="false" />
-            <element signature="e#3730#3840#0" expanded="false" />
+            <element signature="e#3927#4037#0" expanded="false" />
             <element signature="n#!!block;n#tribHelper#0" expanded="false" />
-            <element signature="e#4740#4850#0" expanded="false" />
+            <element signature="e#4937#5047#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -762,9 +761,9 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#!!block;n#pellHelper#0" expanded="false" />
-            <element signature="e#3730#3840#0" expanded="false" />
+            <element signature="e#3927#4037#0" expanded="false" />
             <element signature="n#!!block;n#tribHelper#0" expanded="false" />
-            <element signature="e#4740#4850#0" expanded="false" />
+            <element signature="e#4937#5047#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -793,35 +792,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="120">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <element signature="e#402#459#0" expanded="false" />
+            <element signature="e#472#784#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#405#462#0" expanded="false" />
-            <element signature="e#475#787#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="15" column="78" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scratchpad.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="114" column="80" selection-start-line="114" selection-start-column="80" selection-end-line="114" selection-end-column="80" />
+        <state relative-caret-position="331">
+          <caret line="254" column="30" selection-start-line="254" selection-start-column="30" selection-end-line="254" selection-end-column="30" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#!!block;n#pellHelper#0" expanded="false" />
-            <element signature="e#3730#3840#0" expanded="false" />
+            <element signature="e#3927#4037#0" expanded="false" />
             <element signature="n#!!block;n#tribHelper#0" expanded="false" />
-            <element signature="e#4740#4850#0" expanded="false" />
+            <element signature="e#4937#5047#0" expanded="false" />
           </folding>
         </state>
       </provider>
