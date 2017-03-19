@@ -15,7 +15,6 @@
 	document.title = "JavaScript Recursive Sequences";
 })();
 
-
 /**
  * Creates a div for containing the number series.
  */
@@ -29,7 +28,7 @@ function createDiv() {
  */
 function createCell(pos, val) {
 	var clas = pos.html.getAttribute("class");
-	pos.html.setAttribute("class", clas + " fib-" + val + " fib");
+	pos.html.setAttribute("class", clas + " fib-" + val + " " + clas);
 }
 /**
  * Creates links to sites holding info on the number series.
@@ -102,7 +101,7 @@ var fib = function (n, node) {
 	node.setAttribute("id", "fib");
 	addLink(node);
 	var tree = fibHelper(n);
-		node.appendChild(tree.html);
+	node.appendChild(tree.html);
 	if(n > 7) {
 		var width;
 		if (n === 11) {
@@ -166,10 +165,33 @@ function pellHelper(n) {
 	return {'value': value, 'html': div};
 }
 var pell = function (n, node) {
+	node.setAttribute("class", "pell stuff-box shadowed");
 	node.setAttribute("id", "pell");
 	addLink(node);
 	var tree = pellHelper(n);
 	node.appendChild(tree.html);
+	if(n > 7) {
+		var width;
+		if (n === 11) {
+			width = (document.querySelector('body').clientWidth * (n + 1) / (1.975));
+			node.setAttribute("style", "width:" + width + "px");
+		}
+		else if (n === 10) {
+			width = (document.querySelector('body').clientWidth * (n + 1) / (2.93));
+			node.setAttribute("style", "width:" + width + "px");
+		}
+		else if (n === 9) {
+			width = (document.querySelector('body').clientWidth * (n + 1) / (4.3));
+			node.setAttribute("style", "width:" + width + "px");
+		}
+		else if (n === 8) {
+			width = (document.querySelector('body').clientWidth * (n + 1) / (6.28));
+			node.setAttribute("style", "width:" + width + "px");
+		}
+	}
+	else {
+		node.setAttribute("style", "width: auto");
+	}
 };
 
 /**
@@ -215,10 +237,37 @@ function tribHelper(n) {
 	return {'value': value, 'html': div};
 }
 var trib = function (n, node) {
+	node.setAttribute("class", "trib stuff-box shadowed");
 	node.setAttribute("id", "trib");
 	addLink(node);
 	var tree = tribHelper(n);
 	node.appendChild(tree.html);
+	if(n >= 7) {
+		var width;
+		if (n === 11) {
+			width = (document.querySelector('body').clientWidth * (14.18));
+			node.setAttribute("style", "width:" + width + "px");
+		}
+		else if (n === 10) {
+			width = (document.querySelector('body').clientWidth * (7.71));
+			node.setAttribute("style", "width:" + width + "px");
+		}
+		else if (n === 9) {
+			width = (document.querySelector('body').clientWidth * (4.198));
+			node.setAttribute("style", "width:" + width + "px");
+		}
+		else if (n === 8) {
+			width = (document.querySelector('body').clientWidth * (2.276));
+			node.setAttribute("style", "width:" + width + "px");
+		}
+		else if (n === 7) {
+			width = (document.querySelector('body').clientWidth * (1.24));
+			node.setAttribute("style", "width:" + width + "px");
+		}
+	}
+	else {
+		node.setAttribute("style", "width: auto");
+	}
 };
 
 var fibButton = function(me) {
@@ -230,6 +279,10 @@ var fibButton = function(me) {
 	}
 	var newDiv = createDiv();
 	form.parentNode.appendChild(newDiv);
+	if(document.getElementById("fib") != null) {
+		var oldNode = document.getElementById("fib");
+			form.parentNode.removeChild(oldNode);
+	}
 	fib(parseInt(value), newDiv);
 };
 var fibSlider = function(me) {
@@ -247,12 +300,16 @@ var pellButton = function(me) {
 	}
 	var newDiv = createDiv();
 	form.parentNode.appendChild(newDiv);
+	if(document.getElementById("pell") != null) {
+		var oldNode = document.getElementById("pell");
+		form.parentNode.removeChild(oldNode);
+	}
 	pell(parseInt(value), newDiv);
 };
 var pellSlider = function(me) {
 	var form = me.parentNode;
 	var button = form.querySelector('button');
-	button.textContent = 'pell(' + me.value + ')';
+	button.getElementsByTagName('PellButton').textContent = 'pell(' + me.value + ')';
 };
 
 var tribButton = function(me) {
@@ -264,12 +321,16 @@ var tribButton = function(me) {
 	}
 	var newDiv = createDiv();
 	form.parentNode.appendChild(newDiv);
-	pell(parseInt(value), newDiv);
+	if(document.getElementById("trib") != null) {
+		var oldNode = document.getElementById("trib");
+		form.parentNode.removeChild(oldNode);
+	}
+	trib(parseInt(value), newDiv);
 };
 var tribSlider = function(me) {
 	var form = me.parentNode;
 	var button = form.querySelector('button');
-	button.textContent = 'trib(' + me.value + ')';
+	button.getElementsByTagName("TribButton").textContent = 'trib(' + me.value + ')';
 };
 
 
@@ -277,14 +338,16 @@ var tribSlider = function(me) {
  * essentially my main function.
  */
 (function () {
-	 // fib(11, createDiv());
-	 // fib(10, createDiv());
-	 // fib(9, createDiv());
-	 // fib(8, createDiv());
-	 // fib(7, createDiv());
-	 // fib(6, createDiv());
-	 // fib(5, createDiv());
-	 // fib(4, createDiv());
-	 // pell(11, createDiv());
-	 // trib(11, createDiv());
+	// trib(11, createDiv());
+	// trib(10, createDiv());
+	// trib(9, createDiv());
+	// trib(8, createDiv());
+	trib(7, createDiv());
+	trib(6, createDiv());
+	trib(5, createDiv());
+	trib(4, createDiv());
+	trib(3, createDiv());
+	trib(2, createDiv());
+	trib(1, createDiv());
+	trib(0, createDiv());
 })();

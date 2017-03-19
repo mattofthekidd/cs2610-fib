@@ -12,23 +12,28 @@ a {
     display: inline-block;
     position: static;
 }
+.pell {
+    background: lightyellow;
+    display: inline-block;
+    position: static;
+}
+
+.trib {
+    background: lightpink;
+    display: inline-block;
+    position: static;
+}
 
 #fib {
 
 }
 
 #pell {
-    /*width: 8645px;*/
-    background: lightseagreen;
-    position: relative;
-    display: inline-block;
+
 }
 
 #trib {
-    /*width: 20189px;*/
-    background: lightseagreen;
 
-    display: inline-block;
 }
 
 .shadowed {
@@ -55,7 +60,20 @@ a {
     mix-blend-mode: hard-light;
     display: inline-block;
     margin: 0px 2px 0px 2px;
+}
 
+.pell div {
+    background: rgba(23, 100, 0, .15);
+    mix-blend-mode: hard-light;
+    display: inline-block;
+    margin: 0px 2px 0px 2px;
+}
+
+.trib div {
+    background: rgba(243, 0, 200, .15);
+    mix-blend-mode: hard-light;
+    display: inline-block;
+    margin: 0px 2px 0px 2px;
 }
 
 
