@@ -309,7 +309,7 @@ var pellButton = function(me) {
 var pellSlider = function(me) {
 	var form = me.parentNode;
 	var button = form.querySelector('button');
-	button.getElementsByTagName('PellButton').textContent = 'pell(' + me.value + ')';
+	button.textContent = 'pell(' + me.value + ')';
 };
 
 var tribButton = function(me) {
@@ -330,7 +330,7 @@ var tribButton = function(me) {
 var tribSlider = function(me) {
 	var form = me.parentNode;
 	var button = form.querySelector('button');
-	button.getElementsByTagName("TribButton").textContent = 'trib(' + me.value + ')';
+	button.textContent = 'trib(' + me.value + ')';
 };
 
 
